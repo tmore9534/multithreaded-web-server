@@ -33,10 +33,10 @@ A custom web server built using Java Socket I/O to explore single-threaded, mult
 
 ## 📁 Folder Structure
 
-/single-threaded-server // Basic server handling one request at a time
-/multi-threaded-server // Spawns a new thread per client
-/thread-pool-server // Uses a fixed thread pool to manage clients
-/load-tests // JMeter test plans and results
+- `/single-threaded-server` — Basic server handling one request at a time  
+- `/multi-threaded-server` — Spawns a new thread per client  
+- `/thread-pool-server` — Uses a fixed thread pool to manage clients  
+- `/load-tests` — JMeter test plans and result
 
 
 ---
