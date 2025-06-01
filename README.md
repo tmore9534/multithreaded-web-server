@@ -33,3 +33,33 @@ A custom web server built using Java Socket I/O to explore single-threaded, mult
 
 ## 📁 Folder Structure
 
+/single-threaded-server // Basic server handling one request at a time
+/multi-threaded-server // Spawns a new thread per client
+/thread-pool-server // Uses a fixed thread pool to manage clients
+/load-tests // JMeter test plans and results
+
+
+---
+
+## 📊 Load Testing Insights
+
+Used JMeter to simulate concurrent requests and observed:
+- Request handling times
+- Thread usage patterns
+- Server resource bottlenecks
+
+---
+
+## ✅ Run & Test
+
+Compile and run any of the server versions:
+
+<details>
+<summary>Sample run</summary>
+
+```bash
+javac Server.java
+java Server
+```
+</details> 
+Then simulate requests via browser, curl, or JMeter.
