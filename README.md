@@ -35,7 +35,7 @@ A custom web server built using Java Socket I/O to explore single-threaded, mult
 
 - `/singlethreaded` — Basic server handling one request at a time  
 - `/multithreaded` — Spawns a new thread per client  
-- `/thread-pool-server` — Uses a fixed thread pool to manage clients
+- `/threadpool` — Uses a fixed thread pool to manage clients
 - `/load-tests` — JMeter test plans and result 
 
 
