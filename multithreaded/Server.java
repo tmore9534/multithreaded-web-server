@@ -16,9 +16,10 @@ public class Server {
                 PrintWriter toclient = new PrintWriter(acceptedConnSocket.getOutputStream(), true); // writer
                 BufferedReader fromClient = new BufferedReader(
                         new InputStreamReader(acceptedConnSocket.getInputStream())); // reader
+                counter += 1;
                 System.out.println("counter of no " + counter);
-                String clientMessage = fromClient.readLine();
-                System.out.println("Received from the client: " + clientMessage);
+                // String clientMessage = fromClient.readLine();
+                // System.out.println("Received from the client: " + clientMessage);
                 toclient.println("Hello from the server");
                 toclient.close();
                 fromClient.close();
@@ -30,9 +31,9 @@ public class Server {
     }
 
     public void run() throws IOException, SocketException {
-        int port = 8081;
+        int port = 8011;
         ServerSocket serverSocket = new ServerSocket(port);
-        serverSocket.setSoTimeout(30000);
+        serverSocket.setSoTimeout(20000);
 
         while (true) {
             System.out.println("Server is listening on the port" + port);

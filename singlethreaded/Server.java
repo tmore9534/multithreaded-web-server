@@ -6,6 +6,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Server {
+    static int request_counter = 0;
 
     public void run() {
         try {
@@ -22,18 +23,18 @@ public class Server {
                 PrintWriter toclient = new PrintWriter(acceptedConnection.getOutputStream(), true); // writer
                 BufferedReader fromClient = new BufferedReader(
                         new InputStreamReader(acceptedConnection.getInputStream())); // reader
-
+                request_counter += 1;
+                System.out.println(request_counter);
                 String clientMessage = fromClient.readLine();
                 System.out.println("Received from the client: " + clientMessage);
 
                 toclient.println("Hello from the server");
-
+                toclient.close();
+                fromClient.close();
                 acceptedConnection.close();
             }
         } catch (IOException ex) {
             ex.printStackTrace();
-        } finally {
-
         }
     }
 
